@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Guide: Ultimate Energy Rollercoaster Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Columbus School Brand Colors */
+            --brand-blue: #14235e;
+            --brand-light-blue: #2b45a2;
+            --accent-yellow: #f4c430;
+            --text-main: #333333;
+            --bg-gray: #f8f9fa;
+            --teacher-red: #8b0000;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-main);
+            background-color: #e9ecef;
+            line-height: 1.6;
+            font-size: 11pt;
+        }
+
+        @page {
+            size: A4;
+            margin: 15mm;
+        }
+
+        @media print {
+            body { background-color: white; }
+            .page-container {
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+            }
+            .no-print { display: none !important; }
+            .page-break { page-break-before: always; }
+        }
+
+        .page-container {
+            background-color: white;
+            width: 210mm; /* A4 width */
+            min-height: 297mm; /* A4 height */
+            margin: 20px auto;
+            padding: 20mm;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 4px solid var(--brand-blue);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .school-logo {
+            max-height: 65px;
+            max-width: 250px;
+            object-fit: contain;
+        }
+
+        .document-title {
+            text-align: right;
+            color: var(--teacher-red);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 10pt;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            color: var(--brand-blue);
+            font-size: 22pt;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 900;
+        }
+
+        h2 {
+            color: var(--brand-blue);
+            font-size: 16pt;
+            border-bottom: 2px solid var(--brand-light-blue);
+            padding-bottom: 5px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .ganag-letter {
+            display: inline-block;
+            background-color: var(--brand-blue);
+            color: white;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-weight: 900;
+            font-size: 18pt;
+        }
+
+        p { margin-bottom: 12px; }
+        ul { margin-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 6px; }
+        strong { color: var(--brand-blue); }
+
+        .teacher-note {
+            background-color: #fff0f0;
+            border-left: 5px solid var(--teacher-red);
+            padding: 15px;
+            border-radius: 0 5px 5px 0;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .materials-box {
+            background-color: #f0f4ff;
+            border: 2px dashed var(--brand-light-blue);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .reference-img {
+            max-width: 100%;
+            max-height: 400px;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+            object-fit: contain;
+            display: block;
+            margin: 15px auto;
+        }
+
+        .name-tags-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .name-tag {
+            border: 2px dashed #999;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .print-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: var(--teacher-red);
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .print-btn:hover { background-color: #a00000; }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Print Teacher Guide</button>
+
+    <div class="page-container">
+        
+        <header>
+            <div class="logo-container">
+                <img src="Columbus-logo.png" alt="The Columbus School Logo" class="school-logo" onerror="this.onerror=null; this.src='https://placehold.co/250x65/14235e/ffffff?text=The+Columbus+School';">
+            </div>
+            <div class="document-title">
+                TEACHER GUIDE (GANAG)<br>8th Grade Science & Engineering
+            </div>
+        </header>
+
+        <h1>The Ultimate Energy Rollercoaster</h1>
+        <p style="text-align: center; font-style: italic; color: #555;">A GANAG Lesson Plan for Physics and Engineering</p>
+
+        <h2><span class="ganag-letter">G</span> Set the Goal</h2>
+        <p><strong>Objective:</strong> Students will apply the principles of <strong>Potential Energy (PE)</strong> and <strong>Kinetic Energy (KE)</strong> by designing and constructing a functioning paper rollercoaster.</p>
+        <div class="teacher-note">
+            <p><strong>Teacher Talking Point:</strong> Begin by explicitly stating the importance of energy in physics. Energy cannot be created or destroyed, only transferred. A rollercoaster is the perfect physical manifestation of this rule. Explain that the goal today is to manipulate gravity to maximize ride time—converting high PE into controlled KE.</p>
+        </div>
+
+        <h2><span class="ganag-letter">A</span> Access Prior Knowledge</h2>
+        <p>Before introducing the building materials, engage the class in a discussion to activate their prior knowledge about physics and motion.</p>
+        <ul>
+            <li><strong>Ask the class:</strong> <em>"Think about the biggest rollercoaster you have ever been on. Why does the ride always start with a massive, slow climb up a giant hill?"</em> (Answer: To build maximum Potential Energy).</li>
+            <li><strong>Ask the class:</strong> <em>"What happens if a rollercoaster goes down a steep drop too fast and hits a sharp turn?"</em> (Answer: High Kinetic Energy overcomes friction/gravity, and it derails).</li>
+            <li>Connect these answers to their challenge: They must balance PE and KE to keep their marble on the track for the maximum amount of time.</li>
+        </ul>
+
+        <h2><span class="ganag-letter">N</span> Introduce New Information</h2>
+        
+        <p><strong>1. Project Parameters & Constraints:</strong></p>
+        <ul>
+            <li>The coaster must fit within a <strong>50 cm x 50 cm x 50 cm</strong> area.</li>
+            <li>Materials are strictly limited to paper, masking tape, and paper clips.</li>
+            <li>The evaluation criteria is based on <strong>Time</strong>. The marble that takes the longest to reach the ground safely wins. More turns, ups, and downs = more time!</li>
+        </ul>
+
+        <p><strong>2. Show Real Structures Before Building:</strong></p>
+        <p>Before handing out any paper, show the students what strong paper engineering looks like in real life. Point to the image below on the projector or smartboard and explain the techniques:</p>
+        
+        <img src="Gemini_Generated_Image_zglh8rzglh8rzglh.jpeg" alt="Real life structural techniques" class="reference-img">
+        
+        <div style="background-color: var(--bg-gray); padding: 10px; border-radius: 5px; font-size: 10pt; margin-bottom: 20px;">
+            <strong>Technique Key for Teacher:</strong><br>
+            • <strong>Top Left:</strong> Small squared beam (vertical support).<br>
+            • <strong>Top Right:</strong> Big squared beam (heavy base support).<br>
+            • <strong>Middle Left:</strong> Clip and tape (temporary joint holding before taping).<br>
+            • <strong>Middle Right:</strong> Fish mouth (flattened end to wrap around corners).<br>
+            • <strong>Bottom:</strong> Sleeve slot (sliding smaller tubes into larger ones to extend length).
+        </div>
+
+    </div>
+
+    <div class="page-container page-break">
+        
+        <header>
+            <div class="logo-container">
+                <img src="Columbus-logo.png" alt="The Columbus School Logo" class="school-logo" onerror="this.onerror=null; this.src='https://placehold.co/250x65/14235e/ffffff?text=The+Columbus+School';">
+            </div>
+            <div class="document-title">
+                TEACHER GUIDE (GANAG) | Page 2
+            </div>
+        </header>
+
+        <p><strong>3. Distribute Roles & Name Tags:</strong></p>
+        <p>Explain that real engineers work in specialized teams. Have groups of 4-5 students decide on their roles. <strong>Distribute physical name tags</strong> (or use the printable templates on page 3) so everyone knows their specific job during the build phase.</p>
+        
+        <div class="materials-box">
+            <h3 style="color: var(--brand-blue); margin-bottom: 5px;">Team Roles Overview:</h3>
+            <ul>
+                <li><strong>Lead Engineer:</strong> Reads instructions, manages the 50cm size limit, and plans the physics (PE/KE).</li>
+                <li><strong>Materials Tech:</strong> Cuts paper, preps tape, manages paperclips.</li>
+                <li><strong>Tube & Beam Maker:</strong> Solely responsible for rolling paper tubes and folding square beams.</li>
+                <li><strong>Assembler:</strong> Connects the tracks and beams together using joints.</li>
+                <li><strong>QA / Surveyor:</strong> Measures the structure, tests with the marble, checks stability. <em>(If groups of 4, Lead Engineer does this).</em></li>
+            </ul>
+        </div>
+
+        <h2><span class="ganag-letter">A</span> Apply New Information</h2>
+        <p>Allow students to begin prototyping and building. During this phase, the teacher transitions into a facilitator/project manager role.</p>
+        <div class="teacher-note">
+            <strong>During the Build:</strong>
+            <ul>
+                <li>Walk around and ensure the <strong>Tube & Beam Maker</strong> is actually making parts while the <strong>Assembler</strong> builds. Stop teams that are all trying to tape the same track at once.</li>
+                <li>Ask groups pointing to their tracks: <em>"Where is the marble moving fastest here? How can you slow it down to get a better time score?"</em></li>
+                <li>Remind them to use barrier walls on tight corners to prevent the marble from flying off.</li>
+            </ul>
+        </div>
+
+        <h2><span class="ganag-letter">G</span> Generalize (Review Goal)</h2>
+        <p>Finally, conclude the activity with testing and presentation. This ties the activity back to the initial Goal of understanding energy transfer.</p>
+        <ul>
+            <li><strong>The Measurement:</strong> Have the QA/Surveyor from each team prove their structure fits in the 50x50x50 cm limit.</li>
+            <li><strong>The Drop:</strong> Time the marble's journey from the release point to the final stopper. Record times on the board.</li>
+            <li><strong>The Explanation (Crucial):</strong> Before they sit down, the <strong>Lead Engineer</strong> must point to the track and explain to the class:
+                <ol>
+                    <li>Where the marble has highest Potential Energy.</li>
+                    <li>Where it has highest Kinetic Energy.</li>
+                    <li>How their track design (hills, loops, wide turns) manipulated those forces to slow the marble down.</li>
+                </ol>
+            </li>
+            <li><strong>Wrap Up:</strong> Summarize as a class how mechanical energy transferred throughout the winning designs.</li>
+        </ul>
+
+    </div>
+
+    <div class="page-container page-break">
+        
+        <header>
+            <div class="logo-container">
+                <img src="Columbus-logo.png" alt="The Columbus School Logo" class="school-logo" onerror="this.onerror=null; this.src='https://placehold.co/250x65/14235e/ffffff?text=The+Columbus+School';">
+            </div>
+            <div class="document-title">
+                TEACHER RESOURCES | Page 3
+            </div>
+        </header>
+
+        <h2>Printable Role Name Tags</h2>
+        <p><em>Instructions: Cut these out and distribute them to student groups. Have students tape them to their shirts during the build phase.</em></p>
+
+        <div class="name-tags-grid">
+            <div class="name-tag">
+                <h1 style="font-size: 18pt; margin-bottom: 5px;">LEAD ENGINEER</h1>
+                <p style="font-size: 9pt; color: #555;">Manages the 50cm rules and explains PE/KE</p>
+            </div>
+            <div class="name-tag">
+                <h1 style="font-size: 18pt; margin-bottom: 5px;">MATERIALS TECH</h1>
+                <p style="font-size: 9pt; color: #555;">Cuts paper, preps tape strips, manages clips</p>
+            </div>
+            <div class="name-tag">
+                <h1 style="font-size: 18pt; margin-bottom: 5px;">TUBE & BEAM MAKER</h1>
+                <p style="font-size: 9pt; color: #555;">Rolls tubes and folds structural beams</p>
+            </div>
+            <div class="name-tag">
+                <h1 style="font-size: 18pt; margin-bottom: 5px;">ASSEMBLER</h1>
+                <p style="font-size: 9pt; color: #555;">Tapes parts together and builds the frame</p>
+            </div>
+            <div class="name-tag" style="grid-column: span 2; width: 50%; margin: 0 auto;">
+                <h1 style="font-size: 18pt; margin-bottom: 5px;">QA / SURVEYOR</h1>
+                <p style="font-size: 9pt; color: #555;">Measures dimensions, tests marble, times runs</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
